@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:fulltime_force_task/src/pages/home/bloc/home_bloc.dart';
 import 'package:fulltime_force_task/src/shared/locale/localization_cubit.dart';
 import 'package:fulltime_force_task/src/shared/routes/routes.dart';
 import 'package:fulltime_force_task/src/shared/theme/theme_cubit.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => ThemeCubit()..init()),
         BlocProvider(create: (context) => LocaleCubit()..init()),
+        BlocProvider(create: (context) => HomeBloc()),
       ],
       child: Builder(
         builder: (context) {
@@ -34,6 +36,7 @@ class MyApp extends StatelessWidget {
             // returns to the app after it has been killed while running in the
             // background.
             restorationScopeId: 'app',
+            debugShowCheckedModeBanner: false,
 
             // Provide the generated AppLocalizations to the MaterialApp. This
             // allows descendant Widgets to display the correct translations

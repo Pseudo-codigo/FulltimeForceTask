@@ -1,30 +1,23 @@
-# fulltime_force_task
+# Fulltime Force Task 
 
-A new Flutter project.
+A Flutter project connected to Github API to get this repository's details.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application that follows the
-[simple app state management
-tutorial](https://flutter.dev/docs/development/data-and-backend/state-mgmt/simple).
+Install Flutter by following [this guide](https://docs.flutter.dev/get-started/install)
+Clone the project and run `flutter pub get`
+To run the project in a device or emultor run `flutter run`.
 
 For help getting started with Flutter development, view the
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-## Assets
+## Theme
 
-The `assets` directory houses images, fonts, and any other files you want to
-include with your application.
-
-The `assets/images` directory contains [resolution-aware
-images](https://flutter.dev/docs/development/ui/assets-and-images#resolution-aware).
+Go to `settings` page and change the theme.
 
 ## Localization
 
-This project generates localized messages based on arb files found in
-the `lib/src/localization` directory.
+Go to `settings` page and change the theme.
 
-To support additional languages, please visit the tutorial on
-[Internationalizing Flutter
-apps](https://flutter.dev/docs/development/accessibility-and-localization/internationalization)
+Supported languages are `English` and `Spanish`.
