@@ -5,10 +5,6 @@ import 'package:fulltime_force_task/src/shared/locale/localization_cubit.dart';
 import 'package:fulltime_force_task/src/shared/routes/routes.dart';
 import 'package:fulltime_force_task/src/shared/theme/theme_cubit.dart';
 
-import 'sample_feature/sample_item_details_view.dart';
-import 'sample_feature/sample_item_list_view.dart';
-import 'pages/settings/settings_view.dart';
-
 /// The Widget that configures your application.
 class MyApp extends StatelessWidget {
   MyApp({
