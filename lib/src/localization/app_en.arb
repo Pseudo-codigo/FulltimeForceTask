@@ -1,6 +1,14 @@
 {
-  "appTitle": "fulltime_force_task",
-  "@appTitle": {
+  "homeTitle": "Settings",
+  "@homeTitle": {
     "description": "The title of the application"
-  }
+  },
+  "settingsTitle": "Settings",
+  "settingsTheme": "Theme",
+  "settingsThemeSystem": "System",
+  "settingsThemeDark": "Dark",
+  "settingsThemeLight": "Light",
+  "settingsLocale": "Language",
+  "settingsLocaleEn": "English",
+  "settingsLocaleEs": "Spanish"
 }
