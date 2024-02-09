@@ -1,5 +1,10 @@
 {
-  "homeTitle": "Configuraciones",
+  "homeTitle": "Repositorio",
+  "homeRepository": "Repository",
+  "homeIssues": "Asuntos",
+  "homeDefault": "Rama Por Defecto",
+  "homeStars": "Estrellas",
+  "homeBranch": "Ramas",
   "settingsTitle": "Configuraciones",
   "settingsTheme": "Tema",
   "settingsThemeSystem": "Sistema",

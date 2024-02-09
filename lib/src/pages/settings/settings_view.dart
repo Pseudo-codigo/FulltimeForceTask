@@ -19,7 +19,7 @@ class SettingsView extends StatelessWidget {
     LocaleCubit localeCubit = context.watch<LocaleCubit>();
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.homeTitle),
+        title: Text(AppLocalizations.of(context)!.settingsTitle),
       ),
       body: Container(
         width: double.infinity,
