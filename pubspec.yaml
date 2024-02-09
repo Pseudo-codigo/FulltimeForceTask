@@ -10,6 +10,7 @@ environment:
   sdk: '>=3.2.6 <4.0.0'
 
 dependencies:
+  easy_refresh: ^3.3.4
   flutter:
     sdk: flutter
   flutter_app_name: ^0.1.1
