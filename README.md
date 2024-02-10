@@ -20,6 +20,6 @@ Go to `settings` page and change the theme.
 
 ## Localization
 
-Go to `settings` page and change the theme.
+Go to `settings` page and change the language.
 
 Supported languages are `English` and `Spanish`.
