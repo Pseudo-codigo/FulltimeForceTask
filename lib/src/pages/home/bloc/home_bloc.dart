@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:dart_date/dart_date.dart';
+import 'package:fulltime_force_task/src/shared/utils/git_slug.dart';
 import 'package:github/github.dart';
 
 part 'home_event.dart';
@@ -17,8 +17,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     // final result = await Amplify.Auth.fetchAuthSession();
 
     var git = GitHub();
-    Repository repo = await git.repositories
-        .getRepository(RepositorySlug("Pseudo-codigo", "FulltimeForceTask"));
+    Repository repo = await git.repositories.getRepository(getSlug());
 
     add(OnChangeRepository(repository: repo));
   }

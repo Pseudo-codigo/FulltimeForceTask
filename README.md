@@ -4,8 +4,10 @@ A Flutter project connected to Github API to get this repository's details.
 
 ## Getting Started
 
-Install Flutter by following [this guide](https://docs.flutter.dev/get-started/install)
-Clone the project and run `flutter pub get`
+Install Flutter by following [this guide](https://docs.flutter.dev/get-started/install).
+
+Clone the project and run `flutter pub get`.
+
 To run the project in a device or emultor run `flutter run`.
 
 For help getting started with Flutter development, view the

@@ -1,10 +1,12 @@
 {
-  "homeTitle": "Repositorio",
-  "homeRepository": "Repository",
+  "homeTitle": "Fulltime Force Prueba",
+  "homeRepository": "Nombre Repositorio",
   "homeIssues": "Asuntos",
   "homeDefault": "Rama Por Defecto",
   "homeStars": "Estrellas",
   "homeBranch": "Ramas",
+  "homeUpdated": "Últimos Cambios",
+
   "settingsTitle": "Configuraciones",
   "settingsTheme": "Tema",
   "settingsThemeSystem": "Sistema",
@@ -12,5 +14,9 @@
   "settingsThemeLight": "Claro",
   "settingsLocale": "Idioma",
   "settingsLocaleEn": "Inglés",
-  "settingsLocaleEs": "Español"
+  "settingsLocaleEs": "Español",
+
+  "branchCommitAuthor": "Autor",
+  "branchCommitDate": "Fecha",
+  "branchCommitMessage": "Mensaje"
 }

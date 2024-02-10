@@ -1,13 +1,12 @@
 {
-  "homeTitle": "Repository",
-  "homeRepository": "Repository",
+  "homeTitle": "Fulltime Force Task",
+  "homeRepository": "Repository Name",
   "homeIssues": "Issues",
   "homeDefault": "Default Branch",
   "homeStars": "Stars",
   "homeBranch": "Branches",
-  "@homeTitle": {
-    "description": "The title of the application"
-  },
+  "homeUpdated": "Last Update",
+
   "settingsTitle": "Settings",
   "settingsTheme": "Theme",
   "settingsThemeSystem": "System",
@@ -15,5 +14,13 @@
   "settingsThemeLight": "Light",
   "settingsLocale": "Language",
   "settingsLocaleEn": "English",
-  "settingsLocaleEs": "Spanish"
+  "settingsLocaleEs": "Spanish",
+
+  "branchCommitAuthor": "Author",
+  "branchCommitDate": "Date",
+  "branchCommitMessage": "Message",
+
+  "@homeTitle": {
+    "description": "The title of the application"
+  }
 }
