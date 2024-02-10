@@ -136,9 +136,28 @@ class Home extends StatelessWidget {
                                       elevation: 1,
                                       label: Text(AppLocalizations.of(context)!
                                           .homeBranch),
-                                      icon: const Icon(Icons.commit),
+                                      icon: const Icon(
+                                          Icons.account_tree_rounded),
                                     ),
                                     const SizedBox(width: 16.0),
+                                    FloatingActionButton.extended(
+                                      heroTag: 'commits',
+                                      onPressed: () {
+                                        context.pushNamed(Routes.commits);
+                                      },
+                                      elevation: 1,
+                                      backgroundColor: Colors.blue,
+                                      label: Text(AppLocalizations.of(context)!
+                                          .homeCommits),
+                                      icon: const Icon(
+                                          Icons.commit),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 16.0),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
                                     FloatingActionButton.extended(
                                       heroTag: 'activity',
                                       onPressed: () {
@@ -150,19 +169,14 @@ class Home extends StatelessWidget {
                                           .homeActivity),
                                       icon: const Icon(Icons.history_rounded),
                                     ),
-                                  ],
-                                ),
-                                const SizedBox(height: 16.0),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
+                                    const SizedBox(width: 16.0),
                                     FloatingActionButton.extended(
                                       heroTag: 'settings',
                                       onPressed: () {
                                         context.pushNamed(Routes.settings);
                                       },
                                       elevation: 1,
-                                      backgroundColor: Colors.blue,
+                                      backgroundColor: Colors.red,
                                       label: Text(AppLocalizations.of(context)!
                                           .settingsTitle),
                                       icon: const Icon(Icons.settings),

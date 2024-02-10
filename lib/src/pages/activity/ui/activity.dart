@@ -1,13 +1,10 @@
 import 'package:easy_refresh/easy_refresh.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:fulltime_force_task/src/pages/activity/bloc/activity_bloc.dart';
-import 'package:fulltime_force_task/src/pages/branches/bloc/branches_bloc.dart';
 import 'package:fulltime_force_task/src/shared/utils/format_date.dart';
 import 'package:fulltime_force_task/src/shared/widgets/loading.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:fulltime_force_task/src/shared/widgets/row_item.dart';
 
 class Activity extends StatelessWidget {
   const Activity({super.key});

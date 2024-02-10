@@ -4,6 +4,7 @@
   "homeIssues": "Asuntos",
   "homeBranch": "Ramas",
   "homeActivity": "Actividad",
+  "homeCommits": "Cambios",
   "homeDefault": "Rama Por Defecto",
   "homeStars": "Estrellas",
   "homeUpdated": "Últimos Cambios",
@@ -20,6 +21,7 @@
   "branchCommitAuthor": "Autor",
   "branchCommitDate": "Fecha",
   "branchCommitMessage": "Mensaje",
+  "branchCommitCommiter": "Aplicador",
 
   "activityPush": "Empuje",
   "activityForcePush": "Empuje Forzado",
