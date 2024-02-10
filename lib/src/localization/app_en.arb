@@ -4,6 +4,7 @@
   "homeIssues": "Issues",
   "homeBranch": "Branches",
   "homeActivity": "Activity",
+  "homeCommits": "Commits",
   "homeDefault": "Default Branch",
   "homeStars": "Stars",
   "homeUpdated": "Last Update",
@@ -20,6 +21,7 @@
   "branchCommitAuthor": "Author",
   "branchCommitDate": "Date",
   "branchCommitMessage": "Message",
+  "branchCommitCommiter": "Commiter",
 
   "activityPush": "Push",
   "activityForcePush": "Force Push",
