@@ -84,7 +84,7 @@ class Branches extends StatelessWidget {
                                                   AppLocalizations.of(context)!
                                                       .branchCommitDate),
                                         ]),
-                                    SizedBox(height: 16),
+                                    const SizedBox(height: 16),
                                     Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,

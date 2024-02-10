@@ -2,9 +2,10 @@
   "homeTitle": "Fulltime Force Task",
   "homeRepository": "Repository Name",
   "homeIssues": "Issues",
+  "homeBranch": "Branches",
+  "homeActivity": "Activity",
   "homeDefault": "Default Branch",
   "homeStars": "Stars",
-  "homeBranch": "Branches",
   "homeUpdated": "Last Update",
 
   "settingsTitle": "Settings",
@@ -19,6 +20,13 @@
   "branchCommitAuthor": "Author",
   "branchCommitDate": "Date",
   "branchCommitMessage": "Message",
+
+  "activityPush": "Push",
+  "activityForcePush": "Force Push",
+  "activityBranchCreation": "Branch Creation",
+  "activityBranchDeletion": "Branch Deletion",
+  "activityMerge": "Merge",
+  "activityQueueMerge": "Queue Merge",
 
   "@homeTitle": {
     "description": "The title of the application"

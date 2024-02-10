@@ -14,8 +14,6 @@ class BranchesBloc extends Bloc<BranchesEvent, BranchesState> {
   }
 
   Future<void> getBranch(String name, bool expanded) async {
-    // final result = await Amplify.Auth.fetchAuthSession();
-
     if (expanded) {
       var git = GitHub();
       List<Branch> list = state.listBranch;
@@ -31,8 +29,6 @@ class BranchesBloc extends Bloc<BranchesEvent, BranchesState> {
   }
 
   Future<void> getList() async {
-    // final result = await Amplify.Auth.fetchAuthSession();
-
     var git = GitHub();
     List<Branch> listBranch = await (git.repositories
             .listBranches(RepositorySlug("Pseudo-codigo", "FulltimeForceTask")))

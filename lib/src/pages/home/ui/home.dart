@@ -95,52 +95,6 @@ class Home extends StatelessWidget {
                                                 .homeRepository),
                                       ]),
                                 ),
-                                const SizedBox(height: 16),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    FloatingActionButton.extended(
-                                      heroTag: 'branches',
-                                      onPressed: () {
-                                        context.pushNamed(Routes.branchs);
-                                      },
-                                      elevation: 1,
-                                      label: Text(AppLocalizations.of(context)!
-                                          .homeBranch),
-                                      icon: const Icon(Icons.commit),
-                                    ),
-                                    const SizedBox(width: 16.0),
-                                    FloatingActionButton.extended(
-                                      heroTag: 'settings',
-                                      onPressed: () {
-                                        context.pushNamed(Routes.settings);
-                                      },
-                                      elevation: 1,
-                                      backgroundColor: Colors.red,
-                                      label: Text(AppLocalizations.of(context)!
-                                          .settingsTitle),
-                                      icon: const Icon(Icons.settings),
-                                    ),
-                                  ],
-                                ),
-                                Container(
-                                  height: 80,
-                                  constraints:
-                                      const BoxConstraints(maxWidth: 400),
-                                  child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        RowItem(
-                                            name: getDate(
-                                                state
-                                                    .repositoryModel.updatedAt!,
-                                                AppLocalizations.of(context)
-                                                    ?.localeName),
-                                            value: AppLocalizations.of(context)!
-                                                .homeUpdated),
-                                      ]),
-                                ),
                                 Container(
                                   height: 80,
                                   constraints:
@@ -169,7 +123,69 @@ class Home extends StatelessWidget {
                                                 .homeStars,
                                             separator: true),
                                       ]),
-                                )
+                                ),
+                                const SizedBox(height: 16),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    FloatingActionButton.extended(
+                                      heroTag: 'branches',
+                                      onPressed: () {
+                                        context.pushNamed(Routes.branchs);
+                                      },
+                                      elevation: 1,
+                                      label: Text(AppLocalizations.of(context)!
+                                          .homeBranch),
+                                      icon: const Icon(Icons.commit),
+                                    ),
+                                    const SizedBox(width: 16.0),
+                                    FloatingActionButton.extended(
+                                      heroTag: 'activity',
+                                      onPressed: () {
+                                        context.pushNamed(Routes.activity);
+                                      },
+                                      elevation: 1,
+                                      backgroundColor: Colors.green,
+                                      label: Text(AppLocalizations.of(context)!
+                                          .homeActivity),
+                                      icon: const Icon(Icons.history_rounded),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 16.0),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    FloatingActionButton.extended(
+                                      heroTag: 'settings',
+                                      onPressed: () {
+                                        context.pushNamed(Routes.settings);
+                                      },
+                                      elevation: 1,
+                                      backgroundColor: Colors.blue,
+                                      label: Text(AppLocalizations.of(context)!
+                                          .settingsTitle),
+                                      icon: const Icon(Icons.settings),
+                                    ),
+                                  ],
+                                ),
+                                Container(
+                                  height: 80,
+                                  constraints:
+                                      const BoxConstraints(maxWidth: 400),
+                                  child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        RowItem(
+                                            name: getDate(
+                                                state.repositoryModel.pushedAt!,
+                                                AppLocalizations.of(context)
+                                                    ?.localeName),
+                                            value: AppLocalizations.of(context)!
+                                                .homeUpdated),
+                                      ]),
+                                ),
                               ],
                             ),
                           ),
