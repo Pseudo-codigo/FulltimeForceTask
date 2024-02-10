@@ -4,7 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:fulltime_force_task/src/pages/home/bloc/home_bloc.dart';
 import 'package:fulltime_force_task/src/shared/routes/routes.dart';
+import 'package:fulltime_force_task/src/shared/utils/format_date.dart';
 import 'package:fulltime_force_task/src/shared/widgets/loading.dart';
+import 'package:fulltime_force_task/src/shared/widgets/row_item.dart';
 import 'package:go_router/go_router.dart';
 
 class Home extends StatelessWidget {
@@ -12,11 +14,10 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var bloc = context.read<HomeBloc>();
-    bloc.getRepository();
+    var bloc = context.read<HomeBloc>()..getRepository();
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Fulltime Force Task"),
+        title: Text(AppLocalizations.of(context)?.homeTitle ?? ''),
       ),
       body: BlocBuilder<HomeBloc, HomeState>(
         builder: ((context, state) {
@@ -88,8 +89,7 @@ class Home extends StatelessWidget {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
-                                        rowItem(
-                                            context: context,
+                                        RowItem(
                                             name: state.repositoryModel.name,
                                             value: AppLocalizations.of(context)!
                                                 .homeRepository),
@@ -101,7 +101,9 @@ class Home extends StatelessWidget {
                                   children: [
                                     FloatingActionButton.extended(
                                       heroTag: 'branches',
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        context.pushNamed(Routes.branchs);
+                                      },
                                       elevation: 1,
                                       label: Text(AppLocalizations.of(context)!
                                           .homeBranch),
@@ -121,7 +123,6 @@ class Home extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                const SizedBox(height: 16),
                                 Container(
                                   height: 80,
                                   constraints:
@@ -130,20 +131,40 @@ class Home extends StatelessWidget {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
-                                        rowItem(
-                                            context: context,
-                                            name: state.repositoryModel.openIssuesCount.toString(),
+                                        RowItem(
+                                            name: getDate(
+                                                state
+                                                    .repositoryModel.updatedAt!,
+                                                AppLocalizations.of(context)
+                                                    ?.localeName),
+                                            value: AppLocalizations.of(context)!
+                                                .homeUpdated),
+                                      ]),
+                                ),
+                                Container(
+                                  height: 80,
+                                  constraints:
+                                      const BoxConstraints(maxWidth: 400),
+                                  child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        RowItem(
+                                            name: state
+                                                .repositoryModel.openIssuesCount
+                                                .toString(),
                                             value: AppLocalizations.of(context)!
                                                 .homeIssues),
-                                        rowItem(
-                                            context: context,
-                                            name: state.repositoryModel.defaultBranch,
+                                        RowItem(
+                                            name: state
+                                                .repositoryModel.defaultBranch,
                                             value: AppLocalizations.of(context)!
                                                 .homeDefault,
                                             separator: true),
-                                        rowItem(
-                                            context: context,
-                                            name: state.repositoryModel.stargazersCount.toString(),
+                                        RowItem(
+                                            name: state
+                                                .repositoryModel.stargazersCount
+                                                .toString(),
                                             value: AppLocalizations.of(context)!
                                                 .homeStars,
                                             separator: true),
@@ -164,38 +185,4 @@ class Home extends StatelessWidget {
       ),
     );
   }
-
-  Widget rowItem({
-    required BuildContext context,
-    String name = "",
-    String value = "",
-    bool separator = false,
-  }) {
-    return Expanded(
-        child: Row(
-      children: [
-        if (separator) const VerticalDivider(),
-        Expanded(child: _singleItem(context, name, value)),
-      ],
-    ));
-  }
-
-  Widget _singleItem(BuildContext context, String name, String value) => Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            value,
-            style: Theme.of(context).textTheme.bodySmall,
-          ),
-          Text(
-            name,
-            textAlign: TextAlign.center,
-            softWrap: true,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 18,
-            ),
-          ),
-        ],
-      );
 }

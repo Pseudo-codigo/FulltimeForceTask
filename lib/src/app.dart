@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:fulltime_force_task/src/pages/branches/bloc/branches_bloc.dart';
 import 'package:fulltime_force_task/src/pages/home/bloc/home_bloc.dart';
 import 'package:fulltime_force_task/src/shared/locale/localization_cubit.dart';
 import 'package:fulltime_force_task/src/shared/routes/routes.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => ThemeCubit()..init()),
         BlocProvider(create: (context) => LocaleCubit()..init()),
         BlocProvider(create: (context) => HomeBloc()),
+        BlocProvider(create: (context) => BranchesBloc()),
       ],
       child: Builder(
         builder: (context) {

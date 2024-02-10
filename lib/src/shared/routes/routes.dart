@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
+import 'package:fulltime_force_task/src/pages/branches/ui/branches.dart';
 import 'package:fulltime_force_task/src/pages/home/ui/home.dart';
-import 'package:fulltime_force_task/src/sample_feature/sample_item_list_view.dart';
 import 'package:fulltime_force_task/src/pages/settings/settings_view.dart';
 import 'package:go_router/go_router.dart';
 
 class Routes {
   static const String home = '/home';
   static const String branchs = '/branches';
-  static const String commits = '/settings';
+  static const String commits = '/commit';
   static const String settings = '/settings';
 }
 
@@ -31,7 +31,12 @@ var routes = GoRouter(
     GoRoute(
       name: Routes.branchs,
       path: '/branches',
-      builder: (context, state) => const SampleItemListView(),
+      builder: (context, state) => const Branches(),
+    ),
+    GoRoute(
+      name: Routes.commits,
+      path: '/commit',
+      builder: (context, state) => const Branches(),
     ),
   ],
 );
