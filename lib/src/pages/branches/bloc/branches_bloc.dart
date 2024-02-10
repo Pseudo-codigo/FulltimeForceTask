@@ -30,9 +30,8 @@ class BranchesBloc extends Bloc<BranchesEvent, BranchesState> {
 
   Future<void> getList() async {
     var git = GitHub();
-    List<Branch> listBranch = await (git.repositories
-            .listBranches(RepositorySlug("Pseudo-codigo", "FulltimeForceTask")))
-        .toList();
+    List<Branch> listBranch =
+        await (git.repositories.listBranches(getSlug())).toList();
 
     add(OnChangeList(listBranch: listBranch));
   }
