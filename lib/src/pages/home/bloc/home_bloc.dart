@@ -14,8 +14,6 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   }
 
   Future<void> getRepository() async {
-    // final result = await Amplify.Auth.fetchAuthSession();
-
     var git = GitHub();
     Repository repo = await git.repositories.getRepository(getSlug());
 

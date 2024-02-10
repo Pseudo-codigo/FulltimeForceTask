@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:fulltime_force_task/src/pages/activity/ui/activity.dart';
 import 'package:fulltime_force_task/src/pages/branches/ui/branches.dart';
 import 'package:fulltime_force_task/src/pages/home/ui/home.dart';
 import 'package:fulltime_force_task/src/pages/settings/settings_view.dart';
@@ -8,6 +9,7 @@ class Routes {
   static const String home = '/home';
   static const String branchs = '/branches';
   static const String commits = '/commit';
+  static const String activity = '/activity';
   static const String settings = '/settings';
 }
 
@@ -37,6 +39,11 @@ var routes = GoRouter(
       name: Routes.commits,
       path: '/commit',
       builder: (context, state) => const Branches(),
+    ),
+    GoRoute(
+      name: Routes.activity,
+      path: '/activity',
+      builder: (context, state) => const Activity(),
     ),
   ],
 );

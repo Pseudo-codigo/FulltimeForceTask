@@ -2,9 +2,10 @@
   "homeTitle": "Fulltime Force Prueba",
   "homeRepository": "Nombre Repositorio",
   "homeIssues": "Asuntos",
+  "homeBranch": "Ramas",
+  "homeActivity": "Actividad",
   "homeDefault": "Rama Por Defecto",
   "homeStars": "Estrellas",
-  "homeBranch": "Ramas",
   "homeUpdated": "Últimos Cambios",
 
   "settingsTitle": "Configuraciones",
@@ -18,5 +19,12 @@
 
   "branchCommitAuthor": "Autor",
   "branchCommitDate": "Fecha",
-  "branchCommitMessage": "Mensaje"
+  "branchCommitMessage": "Mensaje",
+
+  "activityPush": "Empuje",
+  "activityForcePush": "Empuje Forzado",
+  "activityBranchCreation": "Rama Creada",
+  "activityBranchDeletion": "Rama Eliminada",
+  "activityMerge": "Unión",
+  "activityQueueMerge": "Unión En Cola"
 }
